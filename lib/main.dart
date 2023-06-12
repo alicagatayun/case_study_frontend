@@ -1,4 +1,6 @@
+import 'package:case_study_frontend/dashboard/api/user_api.dart';
 import 'package:case_study_frontend/dashboard/bloc/dashboard_bloc.dart';
+import 'package:case_study_frontend/dashboard/repository/userstory_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dashboard/ui/dashboard.dart';
@@ -15,12 +17,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late final UserRepository _userRepository;
+  UserRepository? _userRepository;
+  UserStoryRepository? _userStoryRepository;
 
   @override
   void initState() {
     super.initState();
     _userRepository = UserRepository();
+    _userStoryRepository = UserStoryRepository(UserStoryApi());
   }
 
   @override
@@ -29,7 +33,8 @@ class _MyAppState extends State<MyApp> {
       value: _userRepository,
       child: BlocProvider(
         create: (_) => DashboardBloc(
-          userRepository: _userRepository,
+          userRepository: _userRepository!,
+          userStoryRepository: _userStoryRepository!,
         ),
         child: MaterialApp(builder: (context, child) {
           return const DashboardPage();

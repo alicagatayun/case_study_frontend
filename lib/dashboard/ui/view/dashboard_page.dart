@@ -11,7 +11,6 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -51,23 +50,30 @@ class _DashboardPageState extends State<DashboardPage> {
           children: [
             Expanded(
               flex: 1,
-              child: Container(
-                color: Colors.red,
-                child: ListView.builder(
-                  itemCount: 8,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(left: 12.0, right: 12),
-                      child: CircleAvatar(
-                        radius: 36,
-                        child: Image.network(
-                          'https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png',
-                        ),
-                      ),
-                    );
-                  },
-                ),
+              child: BlocBuilder<DashboardBloc, DashboardState>(
+                buildWhen: (prev, curr) => prev.applicationState != curr.applicationState,
+                builder: (context, state) {
+                  print(state.applicationState);
+                  print(state.userRelations);
+                  return Container(
+                    color: Colors.red,
+                    child: ListView.builder(
+                      itemCount: 8,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(left: 12.0, right: 12),
+                          child: CircleAvatar(
+                            radius: 36,
+                            child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png',
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                },
               ),
             ),
             const Expanded(

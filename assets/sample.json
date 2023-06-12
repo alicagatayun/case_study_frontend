@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "user": {
+        "id": "9c956289-a283-4e2e-8ac9-ae7b64988970",
+        "name": "Yeşim",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2009-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": null,
+      "allSeen": false
+    },
+    {
+      "user": {
+        "id": "76a7421c-1243-403c-9551-52f5832ed748",
+        "name": "Seyfettin",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2022-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": {
+        "id": "8e37ae42-56ed-4156-a76b-0a8d6ce2110f",
+        "userId": "76a7421c-1243-403c-9551-52f5832ed748",
+        "numberOfStoryGroup": 3,
+        "createdAt": "2023-06-12T08:40:07.867",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "allSeen": true
+    },
+    {
+      "user": {
+        "id": "a9f11e60-dc1c-45be-a167-cd068114ce4f",
+        "name": "Erdem",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2004-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": null,
+      "allSeen": false
+    },
+    {
+      "user": {
+        "id": "5a99d84d-df6b-406b-b351-30713d1aac09",
+        "name": "Ebrar Karakurt",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2023-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": {
+        "id": "4fde69a3-5c1d-495f-b6c6-3e0610d88e61",
+        "userId": "5a99d84d-df6b-406b-b351-30713d1aac09",
+        "numberOfStoryGroup": 1,
+        "createdAt": "2023-06-12T08:41:09.55",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "allSeen": false
+    },
+    {
+      "user": {
+        "id": "2f6b4560-511f-4a46-8964-2fb39218ba3d",
+        "name": "Ebru",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2009-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": {
+        "id": "8c0f8ca9-d2db-40e1-ae03-80e79b0cc822",
+        "userId": "2f6b4560-511f-4a46-8964-2fb39218ba3d",
+        "numberOfStoryGroup": 2,
+        "createdAt": "2023-06-12T08:40:47.807",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "allSeen": false
+    },
+    {
+      "user": {
+        "id": "b869a5cc-fa0f-4ba8-85cc-5e8bca5d0f0a",
+        "name": "Kamile",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2009-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": {
+        "id": "0ec67c2c-f0d7-456a-8684-44688c1ffe19",
+        "userId": "b869a5cc-fa0f-4ba8-85cc-5e8bca5d0f0a",
+        "numberOfStoryGroup": 1,
+        "createdAt": "2023-06-12T08:40:58.963",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "allSeen": false
+    }
+  ],
+  "errorMessage": null,
+  "errorCode": null,
+  "successMessage": null,
+  "hasError": false
+}

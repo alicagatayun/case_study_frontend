@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:case_study_frontend/dashboard/model/user_dto.dart';
+import 'package:case_study_frontend/dashboard/repository/userstory_repository.dart';
 import 'package:case_study_frontend/main.dart';
 import 'package:equatable/equatable.dart';
 
@@ -12,12 +13,15 @@ part 'dashboard_event.dart';
 class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
   DashboardBloc({
     required UserRepository userRepository,
+    required UserStoryRepository userStoryRepository,
   })  : _userRepository = userRepository,
+        _userStoryRepository = userStoryRepository,
         super(const DashboardState()) {
     on<GetUserRelationStories>(_onGetUserRelationStories);
   }
 
   final UserRepository _userRepository;
+  final UserStoryRepository _userStoryRepository;
 
   Future<String?> getUser() async {
     try {
@@ -28,5 +32,15 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
     }
   }
 
-  void _onGetUserRelationStories(GetUserRelationStories event, Emitter<DashboardState> emit) {}
+  void _onGetUserRelationStories(GetUserRelationStories event, Emitter<DashboardState> emit) async {
+    emit(state.copyWith(applicationState: ApplicationState.loading));
+    var userId = await getUser();
+    if (userId != null) {
+      final result = await _userStoryRepository.getUsersRequested(userId);
+      emit(state.copyWith(applicationState: ApplicationState.loaded, userRelations: result));
+
+    } else {
+      emit(state.copyWith(applicationState: ApplicationState.error));
+    }
+  }
 }

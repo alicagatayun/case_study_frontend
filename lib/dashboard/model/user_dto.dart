@@ -1,21 +1,18 @@
 class UserDto {
   User? user;
   Stories? story;
-  bool allSeen;
-  DateTime createdAt;
+  bool? allSeen;
   UserDto({
     this.user,
     this.story,
-    required this.allSeen,
-    required this.createdAt,
+     this.allSeen,
   });
 
   factory UserDto.fromJson(Map<String, dynamic> json) {
     return UserDto(
       user: json['user'] != null ? User.fromJson(json['user']) : null,
       story: json['story'] != null ? Stories.fromJson(json['story']) : null,
-      allSeen: json['AllSeen'] ?? false,
-      createdAt: json['CreatedAt'],
+      allSeen: json['allSeen'] ?? false,
     );
   }
 }
@@ -34,10 +31,10 @@ class User  {
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
-      id: json['Id'],
-      name: json['Name'],
-      profilePhotoPath: json['ProfilePhotoPath'],
-      createdAt: json['CreatedAt'],
+      id: json['id'],
+      name: json['name'],
+      profilePhotoPath: json['profilePhotoPath'],
+      createdAt: DateTime.parse(json['createdAt']),
     );
   }
 }
@@ -57,10 +54,10 @@ class Stories {
 
   factory Stories.fromJson(Map<String, dynamic> json) {
     return Stories(
-      id: json['Id'],
-      userId: json['UserId'],
-      numberOfStoryGroup: json['NumberOfStoryGroup'],
-      createdAt: json['CreatedAt'],
+      id: json['id'],
+      userId: json['userId'],
+      numberOfStoryGroup: json['numberOfStoryGroup'],
+      createdAt: DateTime.parse(json['createdAt']),
     );
   }
 }
