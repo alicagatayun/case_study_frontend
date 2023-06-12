@@ -1,7 +1,6 @@
+import 'package:case_study_frontend/constants/flutter_contstants.dart';
 import 'package:case_study_frontend/dashboard/bloc/dashboard_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../constants/flutter_contstants.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -53,25 +52,52 @@ class _DashboardPageState extends State<DashboardPage> {
               child: BlocBuilder<DashboardBloc, DashboardState>(
                 buildWhen: (prev, curr) => prev.applicationState != curr.applicationState,
                 builder: (context, state) {
-                  print(state.applicationState);
-                  print(state.userRelations);
-                  return Container(
-                    color: Colors.red,
-                    child: ListView.builder(
-                      itemCount: 8,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(left: 12.0, right: 12),
-                          child: CircleAvatar(
-                            radius: 36,
-                            child: Image.network(
-                              'https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png',
-                            ),
+                  return ListView.builder(
+                    itemCount: state.userRelations.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      var userRelations = state.userRelations;
+                      return Column(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const StoryScreen()),
+                              );
+                            },
+                            child: Padding(
+                                padding: const EdgeInsets.only(left: 12.0, right: 12, top: 12),
+                                child: Container(
+                                  decoration: userRelations[index].allSeen!
+                                      ? null
+                                      : BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                            color: Colors.pink,
+                                            width: 2,
+                                          ),
+                                        ),
+                                  child: CircleAvatar(
+                                    radius: 32,
+                                    child: ClipOval(
+                                      child: Image.network(
+                                        'https://loremflickr.com/320/240',
+                                        fit: BoxFit.cover,
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                      ),
+                                    ),
+                                  ),
+                                )),
                           ),
-                        );
-                      },
-                    ),
+                          Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Text(userRelations[index].user!.name.toString()),
+                          )
+                        ],
+                      );
+                    },
                   );
                 },
               ),
@@ -82,5 +108,14 @@ class _DashboardPageState extends State<DashboardPage> {
             )
           ],
         ));
+  }
+}
+
+class StoryScreen extends StatelessWidget {
+  const StoryScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

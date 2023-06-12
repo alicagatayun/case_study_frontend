@@ -2,8 +2,8 @@
   "data": [
     {
       "user": {
-        "id": "9c956289-a283-4e2e-8ac9-ae7b64988970",
-        "name": "Yeşim",
+        "id": "563a77e9-3a2e-4a45-bdcf-01d214c2f86b",
+        "name": "Ali Çağatay",
         "profilePhotoPath": "Todo",
         "createdAt": "2009-01-01T00:00:00",
         "createdBy": null,
@@ -12,44 +12,7 @@
         "isInUse": true
       },
       "story": null,
-      "allSeen": false
-    },
-    {
-      "user": {
-        "id": "76a7421c-1243-403c-9551-52f5832ed748",
-        "name": "Seyfettin",
-        "profilePhotoPath": "Todo",
-        "createdAt": "2022-01-01T00:00:00",
-        "createdBy": null,
-        "modifiedAt": null,
-        "modifiedBy": null,
-        "isInUse": true
-      },
-      "story": {
-        "id": "8e37ae42-56ed-4156-a76b-0a8d6ce2110f",
-        "userId": "76a7421c-1243-403c-9551-52f5832ed748",
-        "numberOfStoryGroup": 3,
-        "createdAt": "2023-06-12T08:40:07.867",
-        "createdBy": null,
-        "modifiedAt": null,
-        "modifiedBy": null,
-        "isInUse": true
-      },
       "allSeen": true
-    },
-    {
-      "user": {
-        "id": "a9f11e60-dc1c-45be-a167-cd068114ce4f",
-        "name": "Erdem",
-        "profilePhotoPath": "Todo",
-        "createdAt": "2004-01-01T00:00:00",
-        "createdBy": null,
-        "modifiedAt": null,
-        "modifiedBy": null,
-        "isInUse": true
-      },
-      "story": null,
-      "allSeen": false
     },
     {
       "user": {
@@ -119,7 +82,34 @@
         "isInUse": true
       },
       "allSeen": false
+    },
+    {
+      "user": {
+        "id": "76a7421c-1243-403c-9551-52f5832ed748",
+        "name": "Seyfettin",
+        "profilePhotoPath": "Todo",
+        "createdAt": "2022-01-01T00:00:00",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "story": {
+        "id": "8e37ae42-56ed-4156-a76b-0a8d6ce2110f",
+        "userId": "76a7421c-1243-403c-9551-52f5832ed748",
+        "numberOfStoryGroup": 3,
+        "createdAt": "2023-06-12T08:40:07.867",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      "allSeen": true
     }
+
+
+
+
   ],
   "errorMessage": null,
   "errorCode": null,
