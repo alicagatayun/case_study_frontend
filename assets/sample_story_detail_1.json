@@ -1,0 +1,47 @@
+{
+  "data": {
+    "storyDetails": [
+      {
+        "id": "51ba4712-58ca-4ab5-99f5-3281f92b496c",
+        "storyId": "8e37ae42-56ed-4156-a76b-0a8d6ce2110f",
+        "imagePath": "assets/images/s1.jpeg",
+        "isVideo": false,
+        "duration": 0,
+        "createdAt": "2023-06-12T08:44:32.77",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      {
+        "id": "70b51319-3cd7-4224-a07e-7d128ddfb644",
+        "storyId": "8e37ae42-56ed-4156-a76b-0a8d6ce2110f",
+        "imagePath": "assets/images/s2.jpeg",
+        "isVideo": false,
+        "duration": 0,
+        "createdAt": "2023-06-12T08:43:28.567",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      {
+        "id": "c54049a7-5226-4c50-a92d-816518e1c74f",
+        "storyId": "8e37ae42-56ed-4156-a76b-0a8d6ce2110f",
+        "imagePath": "assets/images/s3.jpeg",
+        "isVideo": true,
+        "duration": 22,
+        "createdAt": "2023-06-12T08:44:08.553",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      }
+    ],
+    "startFrom": 0
+  },
+  "errorMessage": null,
+  "errorCode": null,
+  "successMessage": null,
+  "hasError": false
+}

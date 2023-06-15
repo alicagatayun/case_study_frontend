@@ -9,6 +9,7 @@ final class Endpoints {
   // connectTimeout
   static const int connectionTimeout = 15000;
 
-  static const String userRelationsUrl = "AddressType/get-all";
+  static const String userRelationsUrl = "Story/get-user-having-story";
+  static const String storyDetailUrl = "Story/get-story-detail";
 
 }

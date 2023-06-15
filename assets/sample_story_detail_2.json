@@ -1,0 +1,35 @@
+{
+  "data": {
+    "storyDetails": [
+      {
+        "id": "086fd287-9eba-473c-9c3c-49c9aad93326",
+        "storyId": "8c0f8ca9-d2db-40e1-ae03-80e79b0cc822",
+        "imagePath": "TODO",
+        "isVideo": true,
+        "duration": 30,
+        "createdAt": "2023-06-12T08:45:55.117",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      },
+      {
+        "id": "02eaee7e-0377-403f-aac4-9e02cef9f477",
+        "storyId": "8c0f8ca9-d2db-40e1-ae03-80e79b0cc822",
+        "imagePath": "TODO",
+        "isVideo": false,
+        "duration": 0,
+        "createdAt": "2023-06-12T08:47:32.273",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      }
+    ],
+    "startFrom": 1
+  },
+  "errorMessage": null,
+  "errorCode": null,
+  "successMessage": null,
+  "hasError": false
+}

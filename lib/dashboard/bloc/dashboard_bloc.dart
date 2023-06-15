@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:case_study_frontend/constants/application_state.dart';
 import 'package:case_study_frontend/dashboard/model/user_dto.dart';
 import 'package:case_study_frontend/dashboard/repository/userstory_repository.dart';
 import 'package:case_study_frontend/main.dart';
 import 'package:equatable/equatable.dart';
 
 part 'dashboard_state.dart';
-
 part 'dashboard_event.dart';
 
 class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {

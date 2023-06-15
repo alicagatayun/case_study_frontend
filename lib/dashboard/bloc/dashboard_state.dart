@@ -27,4 +27,3 @@ class DashboardState extends Equatable {
   List<Object> get props => [applicationState, userRelations, numberOfStories];
 }
 
-enum ApplicationState { loading, loaded, error }

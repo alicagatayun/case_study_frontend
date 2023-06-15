@@ -1,0 +1,23 @@
+{
+  "data": {
+    "storyDetails": [
+      {
+        "id": "3b265a0d-dc51-4c10-b134-d655b8481fa3",
+        "storyId": "0ec67c2c-f0d7-456a-8684-44688c1ffe19",
+        "imagePath": "TODO",
+        "isVideo": false,
+        "duration": 0,
+        "createdAt": "2023-06-12T08:47:52.04",
+        "createdBy": null,
+        "modifiedAt": null,
+        "modifiedBy": null,
+        "isInUse": true
+      }
+    ],
+    "startFrom": 0
+  },
+  "errorMessage": null,
+  "errorCode": null,
+  "successMessage": null,
+  "hasError": false
+}

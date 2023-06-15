@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dashboard/ui/dashboard.dart';
 
-void main() => runApp(const MaterialApp(
-  title: "App",
-  home: MyApp(),
-));
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -37,8 +34,19 @@ class _MyAppState extends State<MyApp> {
           userRepository: _userRepository!,
           userStoryRepository: _userStoryRepository!,
         ),
-        child: const DashboardPage(),
+        child: const AppView(),
       ),
+    );
+  }
+}
+
+class AppView extends StatelessWidget {
+  const AppView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: DashboardPage(),
     );
   }
 }

@@ -16,4 +16,16 @@ class UserStoryApi {
       rethrow;
     }
   }
+
+  Future<Response> getStoryDetailApi(String storyId) async {
+    Dio dio = Dio();
+    DioClient dioC = DioClient(dio);
+    try {
+      Map<String, dynamic>? queryParameters = {"storyId": storyId};
+      final Response response = await dioC.get(Endpoints.userRelationsUrl, queryParameters: queryParameters);
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }
