@@ -17,21 +17,28 @@ class GetProgressBarNewValue extends StoryEvent {
 }
 
 class NextStoryRequested extends StoryEvent {
-  final int index;
+  const NextStoryRequested();
+}
 
-  const NextStoryRequested(this.index);
+class PreviousStoryRequested extends StoryEvent {
+  const PreviousStoryRequested();
 }
 
 class StopStoryRequested extends StoryEvent {
-
   const StopStoryRequested();
 }
 
 class ContinueStoryRequested extends StoryEvent {
-
   const ContinueStoryRequested();
 }
 
-class Ne extends StoryEvent {}
+class VideoLoaded extends StoryEvent {
+  const VideoLoaded();
+
+}
+class VideoLoading extends StoryEvent {
+  const VideoLoading();
+
+}
 
 class StopAnimation extends StoryEvent {}

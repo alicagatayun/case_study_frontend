@@ -38,7 +38,6 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
     if (userId != null) {
       final result = await _userStoryRepository.getUsersRequested(userId);
       var filteredList = result.where((item) => item.story != null);
-
       emit(state.copyWith(applicationState: ApplicationState.loaded, userRelations: result, numberOfStories: filteredList.length));
     } else {
       emit(state.copyWith(applicationState: ApplicationState.error));

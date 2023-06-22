@@ -22,10 +22,28 @@ class UserStoryApi {
     DioClient dioC = DioClient(dio);
     try {
       Map<String, dynamic>? queryParameters = {"storyId": storyId};
-      final Response response = await dioC.get(Endpoints.userRelationsUrl, queryParameters: queryParameters);
+      final Response response = await dioC.get(Endpoints.storyDetailUrl, queryParameters: queryParameters);
       return response;
     } catch (e) {
       rethrow;
     }
   }
+
+  Future<Response> updateStoryDetail(String storyDetailId, String userId) async {
+    try {
+      Dio dio = Dio();
+      DioClient dioC = DioClient(dio);
+      final Response response = await dioC.post(
+        Endpoints.updateStoryDetailUrl,
+        data: {
+          'StoryDetailId': storyDetailId,
+          'UserId': userId,
+        },
+      );
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
 }

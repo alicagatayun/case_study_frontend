@@ -1,2 +1,2 @@
 enum ApplicationState { loading, loaded, error }
-enum LoaderState {next,close,prev,stop, ready,change,idle,cont }
+enum LoaderState {next,close,prev,stop, ready,change,idle,cont, videoLoading, videoLoaded, startFromDifferentValue }
